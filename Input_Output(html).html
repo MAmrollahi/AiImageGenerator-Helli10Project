@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI QR Codes</title>
+    <link rel="stylesheet" href="/static/IO(css).css">
+</head>
+<body>
+    <nav>
+        </nav>
+
+    <main>
+        <h1>Generate AI QR Codes</h1>
+        <form action="/generate-qr" method="post">
+            <label for="input-type">Choose input type:</label>
+            <select id="input-type" name="input_type">
+                <option value="text">Text</option>
+                </select>
+            <div id="input-container"></div>
+            <button type="submit">Generate QR Code</button>
+        </form>
+
+        <div id="qr-code-container">
+            </div>
+    </main>
+
+    <footer>
+        </footer>
+
+    <script src="/static/IO(JS).js"></script>
+</body>
+</html>

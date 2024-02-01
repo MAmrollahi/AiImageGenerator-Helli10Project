@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account | AI QR Codes</title>
+    <link rel="stylesheet" href="/static/Account(css).css">
+</head>
+<body>
+    <nav>
+        </nav>
+
+    <main>
+        <h1>Account</h1>
+
+        {% if not current_user.is_authenticated %}
+        <form action="/login" method="post">
+            <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="/register">Register</a></p>
+        {% else %}
+        <h2>Welcome, {{ current_user.name }}!</h2>
+        <a href="/logout">Logout</a>
+        {% endif %}
+    </main>
+
+    <footer>
+        </footer>
+
+    <script src="/static/Account(JS).js"></script>
+</body>
+</html>
